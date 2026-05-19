@@ -4,7 +4,7 @@ A static editorial blog designed for GitHub Pages.
 
 ## Features
 
-- Cinematic hero section with a project-local image asset
+- Cinematic hero section with a responsive editorial image
 - Responsive card grid for post discovery
 - Search and topic filtering
 - Bottom pagination for browsing many posts
