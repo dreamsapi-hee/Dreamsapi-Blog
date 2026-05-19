@@ -1,40 +1,40 @@
 const posts = [
-  { title: "AI와 함께 쓰는 법률 리서치 노트", topic: "Law Notes", date: "2026.05.18", read: "6 min", excerpt: "공식 법령 데이터와 생성형 AI를 함께 쓸 때 신뢰도를 끌어올리는 확인 루틴.", tags: ["law", "ai", "research"] },
-  { title: "강의안을 블로그 시리즈로 바꾸는 방법", topic: "Learning Design", date: "2026.05.16", read: "5 min", excerpt: "수업 자료를 검색 가능한 포스트 묶음으로 재구성하는 편집 흐름.", tags: ["course", "writing"] },
-  { title: "프롬프트보다 중요한 작업 설계", topic: "AI Practice", date: "2026.05.14", read: "7 min", excerpt: "좋은 답변은 좋은 요청보다 좋은 업무 구조에서 나온다는 간단한 원칙.", tags: ["prompt", "workflow"] },
-  { title: "판례를 읽을 때 먼저 보는 네 가지", topic: "Law Notes", date: "2026.05.12", read: "8 min", excerpt: "쟁점, 사실관계, 판단 구조, 적용 가능성을 빠르게 분리하는 독해법.", tags: ["case", "method"] },
-  { title: "지식 카드가 쌓일수록 강해지는 이유", topic: "Knowledge Systems", date: "2026.05.10", read: "4 min", excerpt: "메모가 아니라 재사용 가능한 작은 판단 단위를 축적하는 방식.", tags: ["notes", "system"] },
-  { title: "블로그 홈 화면의 정보 밀도", topic: "Design", date: "2026.05.08", read: "5 min", excerpt: "예쁜 첫 화면과 빠른 탐색 사이에서 균형을 잡는 레이아웃 기준.", tags: ["ux", "blog"] },
-  { title: "법령 인용 검증 체크리스트", topic: "Law Notes", date: "2026.05.06", read: "6 min", excerpt: "조문 번호, 시행일, 개정 이력, 하위법령을 순서대로 확인하는 법.", tags: ["citation", "check"] },
-  { title: "AI 자동화의 실패 로그 읽기", topic: "AI Practice", date: "2026.05.04", read: "7 min", excerpt: "실패를 버그가 아니라 다음 설계를 알려주는 데이터로 다루기.", tags: ["automation", "debug"] },
-  { title: "초보자를 위한 카드형 글쓰기", topic: "Learning Design", date: "2026.05.02", read: "5 min", excerpt: "긴 글을 작은 카드 단위로 나누면 독자의 진입 장벽이 낮아집니다.", tags: ["writing", "cards"] },
-  { title: "계약서 검토 전에 해야 할 질문", topic: "Law Notes", date: "2026.04.30", read: "6 min", excerpt: "문구를 보기 전에 당사자, 목적, 돈의 흐름, 종료 조건을 먼저 묻기.", tags: ["contract", "risk"] },
-  { title: "한 페이지 대시보드로 수업 운영하기", topic: "Learning Design", date: "2026.04.28", read: "4 min", excerpt: "자료, 과제, 질의응답을 한 화면에서 관리하는 작고 단단한 방법.", tags: ["teaching", "dashboard"] },
-  { title: "AI 도구를 고르는 현실적인 기준", topic: "AI Practice", date: "2026.04.26", read: "5 min", excerpt: "모델 성능보다 반복 업무와 데이터 흐름에 맞는지를 먼저 봅니다.", tags: ["tools", "ops"] },
-  { title: "검색 가능한 아카이브 만들기", topic: "Knowledge Systems", date: "2026.04.24", read: "6 min", excerpt: "폴더보다 태그와 요약, 그리고 좋은 제목이 오래 갑니다.", tags: ["archive", "search"] },
-  { title: "히어로 섹션이 해야 하는 일", topic: "Design", date: "2026.04.22", read: "3 min", excerpt: "브랜드 이름, 정서, 다음 행동을 첫 화면에서 동시에 전달하기.", tags: ["hero", "visual"] },
-  { title: "온라인 분쟁 상담 기록 정리법", topic: "Law Notes", date: "2026.04.20", read: "7 min", excerpt: "시간순 증거 정리는 상담과 신고의 속도를 크게 높입니다.", tags: ["evidence", "dispute"] },
-  { title: "나만의 리서치 템플릿 만들기", topic: "Knowledge Systems", date: "2026.04.18", read: "5 min", excerpt: "질문, 출처, 판단, 후속 액션을 한 묶음으로 저장하는 구조.", tags: ["template", "research"] },
-  { title: "생성형 AI 수업의 첫 15분", topic: "Learning Design", date: "2026.04.16", read: "4 min", excerpt: "기술 설명보다 학습자의 기대와 두려움을 먼저 정렬합니다.", tags: ["class", "ai"] },
-  { title: "페이지네이션은 어디에 있어야 할까", topic: "Design", date: "2026.04.14", read: "4 min", excerpt: "목록 탐색의 끝에서 다음 행동을 자연스럽게 이어주는 배치.", tags: ["pagination", "ux"] },
-  { title: "판단을 돕는 요약의 조건", topic: "AI Practice", date: "2026.04.12", read: "6 min", excerpt: "짧음보다 중요한 것은 누락된 위험과 불확실성을 드러내는 일.", tags: ["summary", "decision"] },
-  { title: "법률 문서에서 날짜가 중요한 이유", topic: "Law Notes", date: "2026.04.10", read: "5 min", excerpt: "시행일, 공포일, 사건일이 엇갈리면 결론이 달라질 수 있습니다.", tags: ["date", "law"] },
-  { title: "블로그 카드의 좋은 제목", topic: "Design", date: "2026.04.08", read: "3 min", excerpt: "멋진 문장보다 클릭 전 기대를 정확히 맞추는 제목이 오래 갑니다.", tags: ["title", "cards"] },
-  { title: "AI 협업 기록을 남기는 방식", topic: "AI Practice", date: "2026.04.06", read: "5 min", excerpt: "결과물뿐 아니라 결정과 수정 이유를 함께 남기는 습관.", tags: ["collaboration", "log"] },
-  { title: "강의 후 질문을 콘텐츠로 바꾸기", topic: "Learning Design", date: "2026.04.04", read: "4 min", excerpt: "반복 질문은 다음 글의 제목이 될 가능성이 큽니다.", tags: ["qa", "content"] },
-  { title: "법률정보 안내와 법률자문의 경계", topic: "Law Notes", date: "2026.04.02", read: "8 min", excerpt: "일반 정보, 사안 적용, 대리 행위의 차이를 독자에게 투명하게 말하기.", tags: ["ethics", "law"] },
-  { title: "나쁜 자동화를 고치는 법", topic: "AI Practice", date: "2026.03.31", read: "6 min", excerpt: "한 번에 크게 고치기보다 실패 지점을 좁혀 작은 루프로 안정화합니다.", tags: ["automation", "repair"] },
-  { title: "태그 체계를 너무 빨리 만들지 않기", topic: "Knowledge Systems", date: "2026.03.29", read: "4 min", excerpt: "글이 어느 정도 쌓인 뒤 독자의 실제 탐색 언어로 태그를 정리합니다.", tags: ["tags", "archive"] },
-  { title: "카드 그리드의 리듬", topic: "Design", date: "2026.03.27", read: "4 min", excerpt: "같은 크기 안에서 메타, 제목, 요약, 태그의 밀도를 일정하게 유지하기.", tags: ["grid", "layout"] },
-  { title: "사례 기반 학습 자료 만들기", topic: "Learning Design", date: "2026.03.25", read: "5 min", excerpt: "개념 설명 전에 작은 사례를 주면 학습자가 훨씬 빨리 붙잡습니다.", tags: ["case", "learning"] },
-  { title: "법령 검색이 빗나갈 때", topic: "Law Notes", date: "2026.03.23", read: "5 min", excerpt: "약칭, 부분검색, 시행령 혼동을 피하는 확인 절차.", tags: ["search", "law"] },
-  { title: "지식 블로그의 운영 주기", topic: "Knowledge Systems", date: "2026.03.21", read: "4 min", excerpt: "쓰기, 갱신, 묶기, 버리기를 정기적으로 반복하는 편집 캘린더.", tags: ["operations", "blog"] },
-  { title: "작은 CSS 규칙이 주는 안정감", topic: "Design", date: "2026.03.19", read: "3 min", excerpt: "간격, 테두리, 반응형 제약을 정하면 화면이 덜 흔들립니다.", tags: ["css", "polish"] },
-  { title: "AI에게 맡기기 좋은 일과 아닌 일", topic: "AI Practice", date: "2026.03.17", read: "6 min", excerpt: "초안, 비교, 정리는 맡기고 책임 있는 판단은 사람이 붙잡습니다.", tags: ["judgment", "ai"] },
-  { title: "수업 자료의 버전 관리", topic: "Learning Design", date: "2026.03.15", read: "5 min", excerpt: "수정된 슬라이드와 예제 코드를 다시 찾을 수 있게 이름 붙이기.", tags: ["version", "teaching"] },
-  { title: "독자의 다음 클릭을 설계하기", topic: "Design", date: "2026.03.13", read: "4 min", excerpt: "목록 끝의 페이지네이션은 단순한 숫자가 아니라 읽기의 리듬입니다.", tags: ["navigation", "ux"] },
-  { title: "법률 리서치 결과를 공유할 때", topic: "Law Notes", date: "2026.03.11", read: "6 min", excerpt: "출처, 기준일, 미확인 지점을 함께 적어야 오해가 줄어듭니다.", tags: ["source", "research"] },
-  { title: "블로그를 오래 살리는 첫 구조", topic: "Knowledge Systems", date: "2026.03.09", read: "5 min", excerpt: "처음부터 완벽한 CMS보다 단순하고 명료한 정적 구조가 유리할 때.", tags: ["static", "pages"] }
+  { title: "전세금이 안 돌아올 때, 제일 먼저 할 일", topic: "주거와 임대차", date: "2026.05.18", read: "6분", excerpt: "내용증명부터 임차권등기명령까지, 보증금을 지키는 순서를 사례로 정리합니다.", tags: ["전세금", "임대차", "내용증명"] },
+  { title: "알바비를 못 받았을 때 신고 전 체크리스트", topic: "일과 노동", date: "2026.05.16", read: "5분", excerpt: "근로계약서가 없어도 임금체불을 주장할 수 있는 증거와 절차를 살펴봅니다.", tags: ["알바비", "임금체불", "노동청"] },
+  { title: "오픈채팅에서 개인톡이 계속 올 때 대응법", topic: "디지털 생활", date: "2026.05.14", read: "7분", excerpt: "거절 의사 표시, 캡처 보관, 스토킹 신고까지 단계별로 차분히 정리합니다.", tags: ["오픈채팅", "스토킹", "증거"] },
+  { title: "중고거래 사기, 환불 말고 무엇을 해야 할까", topic: "소비자와 거래", date: "2026.05.12", read: "6분", excerpt: "계좌, 대화 내역, 배송 정보로 민사와 형사 대응 가능성을 나눠봅니다.", tags: ["중고거래", "사기", "환불"] },
+  { title: "월세 관리비가 갑자기 올랐을 때", topic: "주거와 임대차", date: "2026.05.10", read: "4분", excerpt: "계약서와 고지 내역을 기준으로 부당한 청구인지 확인하는 방법.", tags: ["월세", "관리비", "계약서"] },
+  { title: "프리랜서 계약서에서 꼭 봐야 할 세 문장", topic: "일과 노동", date: "2026.05.08", read: "5분", excerpt: "대금 지급일, 수정 범위, 저작권 조항을 놓치면 일이 끝난 뒤 다툼이 커집니다.", tags: ["프리랜서", "계약서", "저작권"] },
+  { title: "카톡 욕설, 모욕죄가 되는 경우와 안 되는 경우", topic: "디지털 생활", date: "2026.05.06", read: "6분", excerpt: "공연성, 특정성, 표현 수위를 중심으로 실제 판단 포인트를 풀어봅니다.", tags: ["카톡", "모욕", "명예훼손"] },
+  { title: "헬스장 환불 규정, 약관보다 중요한 기준", topic: "소비자와 거래", date: "2026.05.04", read: "5분", excerpt: "이용 기간, 위약금, 환불 기준을 소비자분쟁해결기준과 함께 봅니다.", tags: ["헬스장", "환불", "약관"] },
+  { title: "층간소음 항의, 선을 넘으면 역으로 불리합니다", topic: "이웃과 공동생활", date: "2026.05.02", read: "5분", excerpt: "항의 방법, 기록 방식, 관리사무소와 분쟁조정 절차를 정리합니다.", tags: ["층간소음", "이웃", "분쟁조정"] },
+  { title: "가족에게 빌려준 돈, 차용증이 없으면 끝일까", topic: "가족과 상속", date: "2026.04.30", read: "6분", excerpt: "계좌이체 내역과 메시지로 빌려준 돈임을 설명하는 방법을 봅니다.", tags: ["차용증", "가족", "대여금"] },
+  { title: "교통사고 합의서에 사인하기 전 확인할 것", topic: "사고와 배상", date: "2026.04.28", read: "7분", excerpt: "치료비, 향후 치료, 과실비율, 보험사 문구를 차례대로 확인합니다.", tags: ["교통사고", "합의", "보험"] },
+  { title: "택배 분실, 판매자와 택배사 중 누구에게 말할까", topic: "소비자와 거래", date: "2026.04.26", read: "4분", excerpt: "구매 방식과 배송 상태에 따라 책임을 묻는 상대가 달라질 수 있습니다.", tags: ["택배", "분실", "온라인쇼핑"] },
+  { title: "회사 단톡방에서 공개 망신을 당했다면", topic: "일과 노동", date: "2026.04.24", read: "6분", excerpt: "직장 내 괴롭힘, 모욕, 명예훼손 가능성을 분리해서 봅니다.", tags: ["직장", "괴롭힘", "단톡방"] },
+  { title: "사진을 허락 없이 올렸을 때 생기는 문제", topic: "디지털 생활", date: "2026.04.22", read: "5분", excerpt: "초상권, 개인정보, 명예훼손이 각각 어떻게 다른지 쉽게 설명합니다.", tags: ["초상권", "개인정보", "사진"] },
+  { title: "내용증명은 협박장이 아니라 기록 장치입니다", topic: "문서와 증거", date: "2026.04.20", read: "5분", excerpt: "내용증명을 보낼 때 넣을 말과 빼야 할 말을 생활 사례로 정리합니다.", tags: ["내용증명", "증거", "분쟁"] },
+  { title: "계약 해지 문자를 보낼 때 조심할 표현", topic: "문서와 증거", date: "2026.04.18", read: "4분", excerpt: "감정적인 문장보다 날짜, 사유, 요구사항을 명확히 남기는 것이 중요합니다.", tags: ["계약해지", "문자", "증거"] },
+  { title: "상속 포기와 한정승인, 이름은 어렵지만 차이는 단순합니다", topic: "가족과 상속", date: "2026.04.16", read: "7분", excerpt: "빚이 있는 상속에서 기한과 선택지를 놓치지 않는 법을 설명합니다.", tags: ["상속포기", "한정승인", "빚"] },
+  { title: "주차 시비가 폭언으로 번졌을 때", topic: "이웃과 공동생활", date: "2026.04.14", read: "4분", excerpt: "현장 대응보다 녹음, 차량번호, 목격자 확보가 더 중요할 때가 많습니다.", tags: ["주차", "폭언", "증거"] },
+  { title: "소액재판, 변호사 없이도 가능할까", topic: "문서와 증거", date: "2026.04.12", read: "6분", excerpt: "청구 금액, 증거, 관할 법원을 기준으로 소액사건 절차를 훑어봅니다.", tags: ["소액재판", "민사", "청구"] },
+  { title: "배달 음식에서 이물질이 나왔을 때", topic: "소비자와 거래", date: "2026.04.10", read: "4분", excerpt: "사진, 영수증, 보관 상태를 남겨야 보상과 신고가 쉬워집니다.", tags: ["배달", "환불", "위생"] },
+  { title: "퇴사할 때 연차수당을 놓치지 않는 법", topic: "일과 노동", date: "2026.04.08", read: "5분", excerpt: "남은 연차, 사용 촉진, 퇴사일을 기준으로 받을 수 있는 금액을 따져봅니다.", tags: ["퇴사", "연차", "수당"] },
+  { title: "명예훼손 글을 발견했을 때 삭제 요청 순서", topic: "디지털 생활", date: "2026.04.06", read: "6분", excerpt: "플랫폼 신고, 캡처, 임시조치, 고소를 어떤 순서로 검토할지 정리합니다.", tags: ["명예훼손", "삭제", "플랫폼"] },
+  { title: "임대인이 집을 보여달라고 할 때 거절할 수 있나", topic: "주거와 임대차", date: "2026.04.04", read: "4분", excerpt: "매매나 새 임차인 모집 상황에서 임차인의 주거 평온과 협조 의무를 봅니다.", tags: ["임대차", "집보기", "거절"] },
+  { title: "학교폭력 기록, 부모가 먼저 알아야 할 절차", topic: "가족과 상속", date: "2026.04.02", read: "8분", excerpt: "신고, 조사, 심의, 조치 결정까지 가족이 준비할 자료를 정리합니다.", tags: ["학교폭력", "절차", "가족"] },
+  { title: "온라인 리뷰를 썼다가 고소당할 수 있을까", topic: "디지털 생활", date: "2026.03.31", read: "6분", excerpt: "사실 적시, 의견 표현, 공익성의 차이를 음식점 리뷰 사례로 풀어봅니다.", tags: ["리뷰", "명예훼손", "후기"] },
+  { title: "보증을 서기 전, 가족이라도 멈춰야 하는 이유", topic: "가족과 상속", date: "2026.03.29", read: "5분", excerpt: "연대보증의 무게와 사후 다툼을 줄이는 확인 문장을 소개합니다.", tags: ["보증", "가족", "채무"] },
+  { title: "렌터카 흠집 비용을 요구받았을 때", topic: "소비자와 거래", date: "2026.03.27", read: "5분", excerpt: "인수 전 사진, 반납 확인서, 수리 견적을 기준으로 대응합니다.", tags: ["렌터카", "수리비", "증거"] },
+  { title: "반려동물 소음과 손해배상 이야기", topic: "이웃과 공동생활", date: "2026.03.25", read: "4분", excerpt: "참을 수 있는 생활소음과 법적 책임이 생기는 상황을 구분합니다.", tags: ["반려동물", "소음", "손해배상"] },
+  { title: "합의금 이야기를 꺼낼 때 절대 하면 안 되는 말", topic: "사고와 배상", date: "2026.03.23", read: "6분", excerpt: "합의와 협박의 경계, 문서로 남길 표현을 조심스럽게 살펴봅니다.", tags: ["합의", "협박", "배상"] },
+  { title: "계좌이체 메모 한 줄이 증거가 되는 순간", topic: "문서와 증거", date: "2026.03.21", read: "4분", excerpt: "돈을 보낼 때 남기는 메모가 훗날 다툼을 줄이는 방법이 될 수 있습니다.", tags: ["계좌이체", "증거", "대여금"] },
+  { title: "보이스피싱 계좌로 돈을 보냈다면", topic: "사고와 배상", date: "2026.03.19", read: "5분", excerpt: "지체 없이 해야 할 신고와 지급정지 요청, 이후 절차를 정리합니다.", tags: ["보이스피싱", "신고", "지급정지"] },
+  { title: "공유숙박 예약 취소, 환불 기준은 어디서 볼까", topic: "소비자와 거래", date: "2026.03.17", read: "4분", excerpt: "플랫폼 약관과 소비자 기준이 충돌할 때 확인할 지점을 봅니다.", tags: ["숙박", "예약취소", "환불"] },
+  { title: "동업을 시작할 때 말로만 정하면 위험한 것들", topic: "일과 노동", date: "2026.03.15", read: "6분", excerpt: "지분, 역할, 비용, 탈퇴 조건을 동업계약서에 남겨야 하는 이유.", tags: ["동업", "계약", "사업"] },
+  { title: "아파트 게시판 글, 어디까지 써도 될까", topic: "이웃과 공동생활", date: "2026.03.13", read: "5분", excerpt: "공익 제보와 명예훼손 사이에서 안전한 문장 작성법을 살펴봅니다.", tags: ["아파트", "게시판", "명예훼손"] },
+  { title: "병원 진료 기록을 받아야 하는 이유", topic: "사고와 배상", date: "2026.03.11", read: "5분", excerpt: "상해, 보험, 손해배상 사건에서 진료 기록이 어떤 역할을 하는지 봅니다.", tags: ["진료기록", "보험", "상해"] },
+  { title: "처음 법률상담을 받을 때 가져갈 자료", topic: "문서와 증거", date: "2026.03.09", read: "5분", excerpt: "상담 시간을 아끼는 사건 정리표와 증거 묶음 만드는 법을 소개합니다.", tags: ["상담", "증거정리", "체크리스트"] }
 ];
 
 const postsPerPage = 9;
@@ -98,7 +98,7 @@ function renderPosts() {
 
   grid.replaceChildren(...visiblePosts.map(createCard));
   emptyState.hidden = filteredPosts.length !== 0;
-  count.textContent = `${filteredPosts.length} posts`;
+  count.textContent = `총 ${filteredPosts.length}개 글`;
   renderPagination(pageCount, filteredPosts.length);
 }
 
@@ -112,7 +112,7 @@ function renderPagination(pageCount, totalPosts) {
     button.type = "button";
     button.className = "page-number";
     button.textContent = page;
-    button.setAttribute("aria-label", `Go to page ${page}`);
+    button.setAttribute("aria-label", `${page}페이지로 이동`);
     if (page === currentPage) {
       button.setAttribute("aria-current", "page");
     }

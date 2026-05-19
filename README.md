@@ -1,19 +1,20 @@
 # Dreamsapi Blog
 
-A static editorial blog designed for GitHub Pages.
+생활법률을 쉽고 재미있게 풀어 설명하는 한국어 정적 블로그입니다.
 
-## Features
+## 구성
 
-- Cinematic hero section with a responsive editorial image
-- Responsive card grid for post discovery
-- Search and topic filtering
-- Bottom pagination for browsing many posts
-- GitHub Pages deployment workflow
+- 생활법률 주제에 맞춘 히어로 섹션
+- 주거, 노동, 소비자, 디지털 분쟁 등 한국어 포스트 데이터
+- 카드형 글 목록
+- 검색과 주제 필터
+- 하단 페이지네이션
+- GitHub Pages 배포 워크플로
 
-## Local Preview
+## 로컬 미리보기
 
 ```powershell
 python -m http.server 4173
 ```
 
-Open `http://localhost:4173`.
+브라우저에서 `http://localhost:4173`을 열면 됩니다.

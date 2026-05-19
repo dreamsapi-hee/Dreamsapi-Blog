@@ -3,61 +3,61 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Dreamsapi Blog - ideas across AI, law, learning, and creative work.">
-    <title>Dreamsapi Blog</title>
+    <meta name="description" content="Dreamsapi Blog - 생활법률을 쉽고 재미있게 풀어 설명하는 한국어 블로그">
+    <title>Dreamsapi Blog | 생활법률 이야기</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#" aria-label="Dreamsapi Blog home">
-        <span class="brand-mark">D</span>
+      <a class="brand" href="#" aria-label="Dreamsapi Blog 홈">
+        <span class="brand-mark">法</span>
         <span>Dreamsapi Blog</span>
       </a>
-      <nav class="top-nav" aria-label="Primary navigation">
-        <a href="#posts">Posts</a>
-        <a href="#collections">Collections</a>
-        <a href="#about">About</a>
+      <nav class="top-nav" aria-label="주요 메뉴">
+        <a href="#posts">글 모아보기</a>
+        <a href="#collections">주제별 길잡이</a>
+        <a href="#about">소개</a>
       </nav>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
-        <img class="hero-image" src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=2400&q=85" alt="">
+        <img class="hero-image" src="assets/life-law-hero.png" alt="">
         <div class="hero-shade"></div>
         <div class="hero-content">
-          <p class="eyebrow">AI, law, learning, and creative systems</p>
-          <h1 id="hero-title"><span>Dreamsapi</span><span>Blog</span></h1>
-          <p class="hero-copy">깊게 읽고 빠르게 탐색하는 지식 블로그. 복잡한 주제를 선명한 카드와 촘촘한 페이지 흐름으로 정리합니다.</p>
+          <p class="eyebrow">생활 속 사건을 법률 이야기로</p>
+          <h1 id="hero-title"><span>생활법률,</span><span>겁내지 말고 읽기</span></h1>
+          <p class="hero-copy">전세금, 알바비, 중고거래, 카톡 분쟁처럼 매일 생기는 문제를 사례와 체크리스트로 쉽게 풀어냅니다.</p>
           <div class="hero-actions">
-            <a class="button primary" href="#posts">Explore posts</a>
-            <a class="button secondary" href="#collections">View collections</a>
+            <a class="button primary" href="#posts">최신 글 보기</a>
+            <a class="button secondary" href="#collections">상황별로 찾기</a>
           </div>
         </div>
       </section>
 
       <section id="collections" class="section collections" aria-labelledby="collections-title">
         <div class="section-head">
-          <p class="eyebrow">Curated paths</p>
-          <h2 id="collections-title">오늘 읽기 좋은 흐름</h2>
+          <p class="eyebrow">주제별 길잡이</p>
+          <h2 id="collections-title">오늘 내 문제와 가까운 법</h2>
         </div>
         <div class="collection-strip">
           <article>
             <span>01</span>
-            <h3>AI Practice</h3>
-            <p>프롬프트, 자동화, 제품 사고를 실제 작업 단위로 다룹니다.</p>
+            <h3>집과 돈</h3>
+            <p>전월세, 보증금, 관리비, 중고거래처럼 돈이 오가는 생활 문제를 다룹니다.</p>
           </article>
           <article>
             <span>02</span>
-            <h3>Law Notes</h3>
-            <p>법률 정보와 판례 흐름을 일반 독자도 따라갈 수 있게 정리합니다.</p>
+            <h3>일과 계약</h3>
+            <p>알바비, 퇴직금, 프리랜서 계약, 약관의 함정을 실제 상황 중심으로 정리합니다.</p>
           </article>
           <article>
             <span>03</span>
-            <h3>Learning Design</h3>
-            <p>강의, 글쓰기, 자료 구조화를 오래 쓰이는 시스템으로 바꿉니다.</p>
+            <h3>디지털 분쟁</h3>
+            <p>카톡, 오픈채팅, 명예훼손, 개인정보, 스토킹 신고 흐름을 쉽게 설명합니다.</p>
           </article>
         </div>
       </section>
@@ -65,47 +65,47 @@
       <section id="posts" class="section posts-section" aria-labelledby="posts-title">
         <div class="section-head split">
           <div>
-            <p class="eyebrow">Latest library</p>
-            <h2 id="posts-title">모든 포스트</h2>
+            <p class="eyebrow">생활법률 서랍</p>
+            <h2 id="posts-title">모든 글</h2>
           </div>
           <div class="post-count" id="post-count" aria-live="polite"></div>
         </div>
 
-        <div class="toolbar" aria-label="Post filters">
+        <div class="toolbar" aria-label="글 검색과 필터">
           <label class="search-box">
-            <span>Search</span>
-            <input id="search-input" type="search" placeholder="키워드, 주제, 태그 검색">
+            <span>검색</span>
+            <input id="search-input" type="search" placeholder="예: 전세금, 알바비, 오픈채팅">
           </label>
           <label class="select-box">
-            <span>Topic</span>
+            <span>주제</span>
             <select id="topic-filter">
-              <option value="all">All topics</option>
+              <option value="all">전체 주제</option>
             </select>
           </label>
         </div>
 
         <div class="post-grid" id="post-grid" aria-live="polite"></div>
-        <p class="empty-state" id="empty-state" hidden>검색 결과가 없습니다.</p>
+        <p class="empty-state" id="empty-state" hidden>검색 결과가 없습니다. 다른 생활 키워드로 찾아보세요.</p>
 
-        <nav class="pagination-wrap" aria-label="Post pagination">
-          <button class="page-control" id="prev-page" type="button">Previous</button>
+        <nav class="pagination-wrap" aria-label="글 페이지 이동">
+          <button class="page-control" id="prev-page" type="button">이전</button>
           <div class="pagination" id="pagination"></div>
-          <button class="page-control" id="next-page" type="button">Next</button>
+          <button class="page-control" id="next-page" type="button">다음</button>
         </nav>
       </section>
 
       <section id="about" class="section about">
         <div>
-          <p class="eyebrow">Editorial note</p>
-          <h2>선명한 탐색을 위한 블로그</h2>
+          <p class="eyebrow">블로그 소개</p>
+          <h2>법률정보를 일상 언어로 바꿉니다</h2>
         </div>
-        <p>Dreamsapi Blog는 많은 글이 쌓여도 독자가 길을 잃지 않도록 검색, 주제 필터, 하단 페이지네이션을 기본 흐름으로 둔 정적 블로그입니다.</p>
+        <p>Dreamsapi Blog는 어려운 법률 용어를 사례, 행동 순서, 증거 체크리스트로 바꿔 읽는 한국어 생활법률 블로그입니다. 글은 일반 정보 제공을 목적으로 하며, 구체적인 사건은 전문가 상담이 필요할 수 있습니다.</p>
       </section>
     </main>
 
     <footer class="site-footer">
       <span>Dreamsapi Blog</span>
-      <span>Designed for GitHub Pages</span>
+      <span>생활법률을 쉽게 읽는 곳</span>
     </footer>
 
     <script src="script.js"></script>
