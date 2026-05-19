@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dreamsapi Blog - ideas across AI, law, learning, and creative work.">
+    <title>Dreamsapi Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Dreamsapi Blog home">
+        <span class="brand-mark">D</span>
+        <span>Dreamsapi Blog</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#posts">Posts</a>
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="assets/dreamsapi-hero.png" alt="">
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">AI, law, learning, and creative systems</p>
+          <h1 id="hero-title"><span>Dreamsapi</span><span>Blog</span></h1>
+          <p class="hero-copy">깊게 읽고 빠르게 탐색하는 지식 블로그. 복잡한 주제를 선명한 카드와 촘촘한 페이지 흐름으로 정리합니다.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#posts">Explore posts</a>
+            <a class="button secondary" href="#collections">View collections</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="collections" class="section collections" aria-labelledby="collections-title">
+        <div class="section-head">
+          <p class="eyebrow">Curated paths</p>
+          <h2 id="collections-title">오늘 읽기 좋은 흐름</h2>
+        </div>
+        <div class="collection-strip">
+          <article>
+            <span>01</span>
+            <h3>AI Practice</h3>
+            <p>프롬프트, 자동화, 제품 사고를 실제 작업 단위로 다룹니다.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Law Notes</h3>
+            <p>법률 정보와 판례 흐름을 일반 독자도 따라갈 수 있게 정리합니다.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Learning Design</h3>
+            <p>강의, 글쓰기, 자료 구조화를 오래 쓰이는 시스템으로 바꿉니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="posts" class="section posts-section" aria-labelledby="posts-title">
+        <div class="section-head split">
+          <div>
+            <p class="eyebrow">Latest library</p>
+            <h2 id="posts-title">모든 포스트</h2>
+          </div>
+          <div class="post-count" id="post-count" aria-live="polite"></div>
+        </div>
+
+        <div class="toolbar" aria-label="Post filters">
+          <label class="search-box">
+            <span>Search</span>
+            <input id="search-input" type="search" placeholder="키워드, 주제, 태그 검색">
+          </label>
+          <label class="select-box">
+            <span>Topic</span>
+            <select id="topic-filter">
+              <option value="all">All topics</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="post-grid" id="post-grid" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>검색 결과가 없습니다.</p>
+
+        <nav class="pagination-wrap" aria-label="Post pagination">
+          <button class="page-control" id="prev-page" type="button">Previous</button>
+          <div class="pagination" id="pagination"></div>
+          <button class="page-control" id="next-page" type="button">Next</button>
+        </nav>
+      </section>
+
+      <section id="about" class="section about">
+        <div>
+          <p class="eyebrow">Editorial note</p>
+          <h2>선명한 탐색을 위한 블로그</h2>
+        </div>
+        <p>Dreamsapi Blog는 많은 글이 쌓여도 독자가 길을 잃지 않도록 검색, 주제 필터, 하단 페이지네이션을 기본 흐름으로 둔 정적 블로그입니다.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Dreamsapi Blog</span>
+      <span>Designed for GitHub Pages</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
